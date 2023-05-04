@@ -43,8 +43,8 @@ export const Index = () => {
             //rutas Hijas
             children: [
                 {
-                    path: '/',
-                    element: <HomePage/>
+                    path: '/HomePage',
+                    element: <HomePage></HomePage>
                   },
                   {
                     path: '/login',
