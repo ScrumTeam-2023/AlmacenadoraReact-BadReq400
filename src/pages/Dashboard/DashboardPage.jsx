@@ -55,7 +55,11 @@ export const DashboardPage = () => {
                         <li>
                             <Link to= 'client'>
                                 <button>
+<<<<<<< HEAD
                                     <span className='text'>Clientes</span>
+=======
+                                    <span className='text'>CLIENTS</span>
+>>>>>>> malvarez-2018477
                                 </button>
                             </Link>
                         </li>

@@ -9,7 +9,11 @@ import { ClientCard } from '../components/ClientCard'
 
 export const ClientPage = () => {
   //crear un useState para Usuario (Principal)
+<<<<<<< HEAD
   const [client, setClient] = useState([{}])
+=======
+ const [client, setClient] = useState([{}])
+>>>>>>> malvarez-2018477
 
   //crear useState para llamar a la clase relacionada con la principal(Secundario)
   //Ejemplo:
@@ -74,7 +78,11 @@ export const ClientPage = () => {
                                 //Debe tener todo lo del modelo de su respectiva clase
       let client = {
         name: document.getElementById('inputName').value,
+<<<<<<< HEAD
         description: document.getElementById('inputDescription').value,
+=======
+        surname: document.getElementById('inputSur').value,
+>>>>>>> malvarez-2018477
         phone: document.getElementById('inputPhone').value,
       }
         //esta parte va la llamada (REVISEN QUE ESTE BIEN ESCRITO)
@@ -125,7 +133,11 @@ useEffect(()=>{
         <circle cx="12" cy="10" r="3" />
         <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
       </svg>
+<<<<<<< HEAD
           | Account
+=======
+          | Client
+>>>>>>> malvarez-2018477
         </div>
 
         {/* Botton para Agregar */}
@@ -150,7 +162,11 @@ useEffect(()=>{
           <Box sx={style}>
             {/* Titulo de la Modal */}
             <Typography id="modal-modal-title" variant='h6' component="h2">
+<<<<<<< HEAD
                   Add Account
+=======
+                  Add Client
+>>>>>>> malvarez-2018477
             </Typography>
             {/* Descripcion y CONTENIDO de la Modal */}
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
@@ -164,7 +180,11 @@ useEffect(()=>{
                 </div> 
 
                 <div className="mb-3">
+<<<<<<< HEAD
                   <label htmlFor="inputSur" className="form-label">Description</label>
+=======
+                  <label htmlFor="inputSur" className="form-label">Surname</label>
+>>>>>>> malvarez-2018477
                   <input type="text" className="form-control" id="inputSur" required/>
                 </div>  
                 

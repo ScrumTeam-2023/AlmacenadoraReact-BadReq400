@@ -50,7 +50,11 @@ export const AccountPage = () => {
   
   const getAccount = async()=>{
     try {
+<<<<<<< HEAD
       const { data } = await axios.get('http://localhost:3200/account/getaccounts')
+=======
+      const { data } = await axios.get('http://localhost:3200/account/get-accounts')
+>>>>>>> malvarez-2018477
       if(data.account)
           //aca debe ir el nombre de la ruta que deseamos acceder (en este caso Usuarios (user))
       {
@@ -160,8 +164,13 @@ useEffect(()=>{
                 <form>
                 
                 <div className="mb-3">
+<<<<<<< HEAD
                   <label htmlFor="inputUser" className="form-label">DPI</label>
                   <input type="text" className="form-control" id="inputUser" required/>
+=======
+                  <label htmlFor="inputDpi" className="form-label">DPI</label>
+                  <input type="text" className="form-control" id="inputDpi" required/>
+>>>>>>> malvarez-2018477
                 </div>  
 
                 <div className="mb-3">
@@ -170,14 +179,24 @@ useEffect(()=>{
                 </div> 
 
                 <div className="mb-3">
+<<<<<<< HEAD
                   <label htmlFor="inputSur" className="form-label">surname</label>
                   <input type="text" className="form-control" id="inputSur" required/>
+=======
+                  <label htmlFor="inputSurname" className="form-label">surname</label>
+                  <input type="text" className="form-control" id="inputSurname" required/>
+>>>>>>> malvarez-2018477
                 </div>  
                 
 
                 <div className="mb-3">
+<<<<<<< HEAD
                   <label htmlFor="inputRole" className="form-label">Age</label>
                   <input type="text" className="form-control" id="inputRole" required/>
+=======
+                  <label htmlFor="inputAge" className="form-label">Age</label>
+                  <input type="text" className="form-control" id="inputAge" required/>
+>>>>>>> malvarez-2018477
                 </div>  
 
 

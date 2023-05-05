@@ -1,16 +1,32 @@
 //Estos se pueden copiar sin problema a cada Pagina
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+<<<<<<< HEAD
 import { Box, Modal, Typography } from '@mui/material'
 import Swal from 'sweetalert2'
 import { UserCard } from '../components/UserCard'
 //IMPORTANTE: Exportar cada carta respectivamente
 
+=======
+
+import { useParams } from 'react-router-dom' 
+
+import { Box, Modal, Typography } from '@mui/material'
+import Swal from 'sweetalert2'
+import { UserCard } from '../components/UserCard'
+//IMPORTANTE: Exportar cada carta respectivamente
+
+>>>>>>> malvarez-2018477
 
 export const UserPage = () => {
   //crear un useState para Usuario (Principal)
   const [user, setUser] = useState([{}])
+<<<<<<< HEAD
 
+=======
+  //agregar ID
+  const { id } = useParams();
+>>>>>>> malvarez-2018477
   //crear useState para llamar a la clase relacionada con la principal(Secundario)
   //Ejemplo:
   //Const [admin, setAdmin] = useState ([])
@@ -94,12 +110,56 @@ export const UserPage = () => {
 //para refrescar la pagina ^
         }
     } catch (err) {
+<<<<<<< HEAD
+=======
+      Swal.fire({
+        title: 'That.. Was not coffee',
+        icon: 'error',
+        text: 'Something went Wrong (Trying to Asign a New ADMIN or Something in the backend)'
+      })
       alert(err.response.data.message)
     }
   }
 
+
+  const updateUser = async() =>{
+    try {
+      let updatedUser = {
+        name: document.getElementById('inputName').value,
+        surname: document.getElementById('inputSur').value,
+        username: document.getElementById('inputUser').value,
+        password: document.getElementById('inputPass').value,
+        email: document.getElementById('inputEmail').value,
+        phone: document.getElementById('inputPhone').value,
+        role: document.getElementById('inputRole').value
+      }
+      const { data } = await axios.put(`http://localhost:3200/user/update/${id}`, updatedUser)
+      if(data.user){
+        Swal.fire({
+          title:'New Cup!',
+          icon: 'success',
+          text: 'User Modified Succesfully!',
+          timer: 2000
+        })
+      }
+      getUser()
+    } catch (err) {
+      Swal.fire({
+        title: 'Welp This is Akward...',
+        icon: 'error',
+        text: 'Something went Wrong (Trying to Update Worker)'
+      })
+>>>>>>> malvarez-2018477
+      alert(err.response.data.message)
+    }
+  }
+
+<<<<<<< HEAD
 // funcion para modal
 // ejecutar mas de una funcion a la vez
+=======
+
+>>>>>>> malvarez-2018477
 
 const addThem = async()=>{
   //cerrar modal
@@ -140,6 +200,18 @@ useEffect(()=>{
          {/* Botton para Agregar */}
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+>>>>>>> malvarez-2018477
          {/* Modal */}
          <Modal
         //  aca debe ir lo siguente
@@ -195,6 +267,22 @@ useEffect(()=>{
                   <input type="text" className="form-control" id="inputRole" required/>
                 </div>  
 
+<<<<<<< HEAD
+=======
+
+                </form>
+                {/* agregar */}
+                <div className="row g-0 justify-content-center">
+
+                <button className="btn btn-success" onClick={()=> addThem()}>Add</button>
+                    <br></br>
+                    <br></br>
+                <button className="btn btn-danger" onClick={handleClose}>nah...</button>
+
+                </div>
+
+                
+>>>>>>> malvarez-2018477
                 {/* <div className="mb-3"> para los que requieran otra clase
             <label htmlFor="inputAdmin" className="form-label">Admin master</label>
                 <select className='form-control' id='inputAdmin'>
@@ -207,6 +295,7 @@ useEffect(()=>{
                   }
                 </select>
               </div> */}
+<<<<<<< HEAD
 
                 </form>
                 {/* agregar */}
@@ -218,12 +307,26 @@ useEffect(()=>{
                 <button className="btn btn-danger" onClick={handleClose}>nah...</button>
 
                 </div>
+=======
+>>>>>>> malvarez-2018477
             </Typography>
           </Box>
          </Modal>
          {/* Fin del Modal */}
 
+<<<<<<< HEAD
           {/* mostrar Carta */}
+=======
+
+          {/* mostrar Carta */}
+
+
+
+
+
+
+          
+>>>>>>> malvarez-2018477
          <div className=" row g-0 justify-content-center">
           {
             // aca se coloca los datos a mostrar
