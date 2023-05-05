@@ -56,10 +56,14 @@ export const DashboardPage = () => {
                             <Link to= 'client'>
                                 <button>
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     <span className='text'>Clientes</span>
 =======
                                     <span className='text'>CLIENTS</span>
 >>>>>>> malvarez-2018477
+=======
+                                    <span className='text'>CLIENTS</span>
+>>>>>>> ctomas
                                 </button>
                             </Link>
                         </li>

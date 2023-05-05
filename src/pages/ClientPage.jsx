@@ -10,10 +10,14 @@ import { ClientCard } from '../components/ClientCard'
 export const ClientPage = () => {
   //crear un useState para Usuario (Principal)
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [client, setClient] = useState([{}])
 =======
  const [client, setClient] = useState([{}])
 >>>>>>> malvarez-2018477
+=======
+ const [client, setClient] = useState([{}])
+>>>>>>> ctomas
 
   //crear useState para llamar a la clase relacionada con la principal(Secundario)
   //Ejemplo:
@@ -79,10 +83,14 @@ export const ClientPage = () => {
       let client = {
         name: document.getElementById('inputName').value,
 <<<<<<< HEAD
+<<<<<<< HEAD
         description: document.getElementById('inputDescription').value,
 =======
         surname: document.getElementById('inputSur').value,
 >>>>>>> malvarez-2018477
+=======
+        surname: document.getElementById('inputSur').value,
+>>>>>>> ctomas
         phone: document.getElementById('inputPhone').value,
       }
         //esta parte va la llamada (REVISEN QUE ESTE BIEN ESCRITO)
@@ -134,10 +142,14 @@ useEffect(()=>{
         <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
       </svg>
 <<<<<<< HEAD
+<<<<<<< HEAD
           | Account
 =======
           | Client
 >>>>>>> malvarez-2018477
+=======
+          | Client
+>>>>>>> ctomas
         </div>
 
         {/* Botton para Agregar */}
@@ -163,10 +175,14 @@ useEffect(()=>{
             {/* Titulo de la Modal */}
             <Typography id="modal-modal-title" variant='h6' component="h2">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   Add Account
 =======
                   Add Client
 >>>>>>> malvarez-2018477
+=======
+                  Add Client
+>>>>>>> ctomas
             </Typography>
             {/* Descripcion y CONTENIDO de la Modal */}
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
@@ -181,10 +197,14 @@ useEffect(()=>{
 
                 <div className="mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <label htmlFor="inputSur" className="form-label">Description</label>
 =======
                   <label htmlFor="inputSur" className="form-label">Surname</label>
 >>>>>>> malvarez-2018477
+=======
+                  <label htmlFor="inputSur" className="form-label">Surname</label>
+>>>>>>> ctomas
                   <input type="text" className="form-control" id="inputSur" required/>
                 </div>  
                 

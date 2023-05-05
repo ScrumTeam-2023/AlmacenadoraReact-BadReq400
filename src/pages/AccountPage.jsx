@@ -51,10 +51,14 @@ export const AccountPage = () => {
   const getAccount = async()=>{
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const { data } = await axios.get('http://localhost:3200/account/getaccounts')
 =======
       const { data } = await axios.get('http://localhost:3200/account/get-accounts')
 >>>>>>> malvarez-2018477
+=======
+      const { data } = await axios.get('http://localhost:3200/account/get-accounts')
+>>>>>>> ctomas
       if(data.account)
           //aca debe ir el nombre de la ruta que deseamos acceder (en este caso Usuarios (user))
       {
@@ -165,12 +169,17 @@ useEffect(()=>{
                 
                 <div className="mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <label htmlFor="inputUser" className="form-label">DPI</label>
                   <input type="text" className="form-control" id="inputUser" required/>
 =======
                   <label htmlFor="inputDpi" className="form-label">DPI</label>
                   <input type="text" className="form-control" id="inputDpi" required/>
 >>>>>>> malvarez-2018477
+=======
+                  <label htmlFor="inputDpi" className="form-label">DPI</label>
+                  <input type="text" className="form-control" id="inputDpi" required/>
+>>>>>>> ctomas
                 </div>  
 
                 <div className="mb-3">
@@ -180,16 +189,22 @@ useEffect(()=>{
 
                 <div className="mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <label htmlFor="inputSur" className="form-label">surname</label>
                   <input type="text" className="form-control" id="inputSur" required/>
 =======
                   <label htmlFor="inputSurname" className="form-label">surname</label>
                   <input type="text" className="form-control" id="inputSurname" required/>
 >>>>>>> malvarez-2018477
+=======
+                  <label htmlFor="inputSurname" className="form-label">surname</label>
+                  <input type="text" className="form-control" id="inputSurname" required/>
+>>>>>>> ctomas
                 </div>  
                 
 
                 <div className="mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <label htmlFor="inputRole" className="form-label">Age</label>
                   <input type="text" className="form-control" id="inputRole" required/>
@@ -197,6 +212,10 @@ useEffect(()=>{
                   <label htmlFor="inputAge" className="form-label">Age</label>
                   <input type="text" className="form-control" id="inputAge" required/>
 >>>>>>> malvarez-2018477
+=======
+                  <label htmlFor="inputAge" className="form-label">Age</label>
+                  <input type="text" className="form-control" id="inputAge" required/>
+>>>>>>> ctomas
                 </div>  
 
 
