@@ -48,7 +48,6 @@ export const UserPage = () => {
 
   //funcion para OBTENER datos
   //para que muestre datos en la carta
-  
   const getUser = async()=>{
     try {
       const { data } = await axios.get('http://localhost:3200/user/get')
@@ -240,7 +239,9 @@ useEffect(()=>{
                   email={email}
                   phone={phone}
                   role={role}
-                ></UserCard>
+                >
+                  
+                </UserCard>
               )
             })
           }

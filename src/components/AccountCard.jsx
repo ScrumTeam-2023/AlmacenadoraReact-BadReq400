@@ -6,7 +6,7 @@ import axios from 'axios'
 import { Box, Modal, Typography } from '@mui/material'
                     //SE CREA UNA CARTA POR ENTIDAD!
                     //el titulo se deja!
-export const AccountCard = ({title, name, age,surname, email,phone}) => {
+export const AccountCard = ({title, name, surname, age,email ,phone }) => {
 
   //crear un useState para Usuario (Principal)
   const [account, setAccount] = useState([{}])
@@ -18,9 +18,8 @@ export const AccountCard = ({title, name, age,surname, email,phone}) => {
 
   const getAccount = async()=>{
     try {
-      const { data } = await axios.get(`http://localhost:3200/account/get-accounts`)
+      const { data } = await axios.get(`http://localhost:3200/account/getaccounts`)
       if(data.account)
-          //aca debe ir el nombre de la ruta que deseamos acceder (en este caso Usuarios (user))
       {
         setAccount(data.account)
         console.log(data.account)
@@ -46,7 +45,6 @@ export const AccountCard = ({title, name, age,surname, email,phone}) => {
   };
 
   const [open, setOpen] = useState(false);
-
   //Funcionamiento
   //Abierto
   const handleOpen = () => setOpen(true);
@@ -83,7 +81,6 @@ export const AccountCard = ({title, name, age,surname, email,phone}) => {
     let confirmDelete = confirm('Are you sure to delete this Account?')
     if(confirmDelete){
         const { data } = await axios.delete(`http://localhost:3200/account/delete-account/${id}`)
-       getAccount()
         alert(`Thy kind is Dead`)
       }
    } catch (err) {
@@ -95,7 +92,7 @@ export const AccountCard = ({title, name, age,surname, email,phone}) => {
 
 
 useEffect(()=>{
-
+  getAccount();
   //aca deberia ir tambien el GET del secundario/Referencial
 },[]);
 
@@ -103,7 +100,8 @@ useEffect(()=>{
     <>
         <div className="card m-3 g-0" style={{maxWidth: '18rem', maxHeight: '20rem'}}>
                 <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
+
+                <h5 className="card-title">{title}</h5>
                     <p className="card-text">{name}</p>
                     <p className="card-text">{surname}</p>
                     <p className="card-text">{age}</p>

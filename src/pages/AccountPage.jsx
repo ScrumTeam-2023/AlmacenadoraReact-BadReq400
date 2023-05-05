@@ -39,7 +39,6 @@ export const AccountPage = () => {
 
   //Constante para que la modal Abra y cierre Respectivamente
   const [open, setOpen] = useState(false);
-
   //Funcionamiento
   //Abierto
   const handleOpen = () => setOpen(true);
@@ -51,7 +50,7 @@ export const AccountPage = () => {
   
   const getAccount = async()=>{
     try {
-      const { data } = await axios.get('http://localhost:3200/account/get-accounts')
+      const { data } = await axios.get('http://localhost:3200/account/getaccounts')
       if(data.account)
           //aca debe ir el nombre de la ruta que deseamos acceder (en este caso Usuarios (user))
       {
@@ -225,15 +224,15 @@ useEffect(()=>{
          <div className=" row g-0 justify-content-center">
           {
             // aca se coloca los datos a mostrar
-            account.map(({dpi, name, surname, age, email,phone}, i)=>{
+            account.map(({dpi, name, surname, age, email, phone}, i)=>{
               return (
                 <AccountCard
                 // ahora algo un tanto pesado
                 //colocas ahora el H5 y los P en orden como en la Carta
                   key={i}
                   title={dpi}
-                  surname={name}
-                  username={surname}
+                  name={name}
+                  surname={surname}
                   age={age}
                   email={email}
                   phone={phone}
