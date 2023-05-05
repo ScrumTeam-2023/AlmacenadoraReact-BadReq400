@@ -6,7 +6,7 @@ import axios from 'axios'
 import { Box, Modal, Typography } from '@mui/material'
                     //SE CREA UNA CARTA POR ENTIDAD!
                     //el titulo se deja!
-export const CellarCard = ({title, description, location, size,price}) => {
+export const CellarCard = ({title, description, location, size,client,price}) => {
 
   //crear un useState para Usuario (Principal)
   const [bodega, setBodega] = useState([{}])
@@ -63,7 +63,7 @@ export const CellarCard = ({title, description, location, size,price}) => {
         description: document.getElementById('inputDes').value,
         location: document.getElementById('inputLocation').value,
         size: document.getElementById('inputSize').value,
-        //availability: document.getElementById('inputAvaial').value,
+        client: document.getElementById('inputClient').value,
         price: document.getElementById('inputPrice').value,
       }
     } catch (err) {
@@ -84,7 +84,6 @@ export const CellarCard = ({title, description, location, size,price}) => {
     let confirmDelete = confirm('Are you sure to delete this Bodega?')
     if(confirmDelete){
         const { data } = await axios.delete(`http://localhost:3200/bodega/delete/${id}`)
-      
         alert(`Thy kind is Dead`)
       }
       location.reload()
@@ -109,6 +108,7 @@ useEffect(()=>{
                     <p className="card-text">{description}</p>
                     <p className="card-text">{location}</p>
                     <p className="card-text">{size}</p>
+                    <p className="card-text">{client}</p>
                     <p className="card-text">{price}</p>
 
                     <div className='grid gap-3'>

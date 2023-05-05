@@ -6,10 +6,10 @@ import axios from 'axios'
 import { Box, Modal, Typography } from '@mui/material'
                     //SE CREA UNA CARTA POR ENTIDAD!
                     //el titulo se deja!
-export const UserCard = ({title, surname, username, email,phone,role}) => {
+export const AddServicesCard = ({title, description,price}) => {
 
   //crear un useState para Usuario (Principal)
-  const [user, setUser] = useState([{}])
+  const [service, setService] = useState([{}])
   const { id } = useParams();
   //para Actualizar con un referencial usar de referencia (ProductManagerReact)
   //Ejemplo
@@ -17,14 +17,14 @@ export const UserCard = ({title, surname, username, email,phone,role}) => {
                                   // se cambia a string Literal + el ID elegido
 
 
- const getUser = async()=>{
+ const getService = async()=>{
     try {
-      const { data } = await axios.get('http://localhost:3200/user/get')
-      if(data.user)
+      const { data } = await axios.get('http://localhost:3200/services/get')
+      if(data.service)
           //aca debe ir el nombre de la ruta que deseamos acceder (en este caso Usuarios (user))
       {
-        setUser(data.user)
-        console.log(data.user)
+        setService(data.service)
+        console.log(data.service)
       }
       
     } catch (err) {
@@ -56,49 +56,48 @@ export const UserCard = ({title, surname, username, email,phone,role}) => {
   const handleClose = () => setOpen(false);
 
 
-  const updateUser= async() =>{
-    try {
-      let updateUser = {
-        name: document.getElementById('inputName').value,
-        surname: document.getElementById('inputSur').value,
-        userame: document.getElementById('inputUser').value,
-        password: document.getElementById('inputPass').value,
-        email: document.getElementById('inputEmail').value,
-        phone: document.getElementById('inputPhone').value,
-        role: document.getElementById('inputRole').value
+  // const updateService= async() =>{
+  //   try {
+  //     let updateService = {
+  //       name: document.getElementById('inputName').value,
+  //       description: document.getElementById('inputDes').value,
+  //       location: document.getElementById('inputLocation').value,
+  //       size: document.getElementById('inputSize').value,
+  //       //availability: document.getElementById('inputAvaial').value,
+  //       price: document.getElementById('inputPrice').value,
+  //     }
+  //   } catch (err) {
+  //     console.log('Error at Editin in Card from Bodega')
+  //   }
+  // }
 
-      }
-    } catch (err) {
-      console.log('Error at Editin in Card from User')
-    }
-  }
-
-  const updateAll = async()=>{
-    updateUser();
-    handleClose()
-  }
+  // const updateAll = async()=>{
+  //   updateService();
+  //   handleClose()
+  // }
 
 
 
 
-  const DeleteUser= async(id) =>{
-   try {
-    let confirmDelete = confirm('Are you sure to delete this User?')
-    if(confirmDelete){
-        const { data } = await axios.delete(`http://localhost:3200/user/delete/${id}`)    
-        alert(`Thy kind is Dead`)
-      }
-      location.reload()
-   } catch (err) {
-    console.error(err)
+  // const DeleteServicio= async(id) =>{
+  //  try {
+  //   let confirmDelete = confirm('Are you sure to delete this Service?')
+  //   if(confirmDelete){
+  //       const { data } = await axios.delete(`http://localhost:3200/services /delete/${id}`)
+      
+  //       alert(`Thy kind is Dead`)
+  //     }
+  //     location.reload()
+  //  } catch (err) {
+  //   console.error(err)
     
-   }
-  }
+  //  }
+  // }
 
 
 
 useEffect(()=>{
-  getUser();
+  getService();
   //aca deberia ir tambien el GET del secundario/Referencial
 },[]);
 
@@ -107,11 +106,8 @@ useEffect(()=>{
         <div className="card m-3 g-0" style={{maxWidth: '18rem', maxHeight: '20rem'}}>
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>
-                    <p className="card-text">{surname}</p>
-                    <p className="card-text">{username}</p>
-                    <p className="card-text">{email}</p>
-                    <p className="card-text">{phone}</p>
-                    <p className="card-text">{role}</p>
+                    <p className="card-text">{description}</p>  
+                    <p className="card-text">{price}</p>
 
                     <div className='grid gap-3'>
                         {/* EDITAR */}
@@ -123,7 +119,7 @@ useEffect(()=>{
                         
                     </span>
                         {/* ELIMINAR */}
-                    <span className='p-2 g-col-6' onClick={()=> DeleteUser({id})}>
+                    <span className='p-2 g-col-6' onClick={()=> DeleteService({id})}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash2-fill" viewBox="0 0 16 16">
                       <path d="M2.037 3.225A.703.703 0 0 1 2 3c0-1.105 2.686-2 6-2s6 .895 6 2a.702.702 0 0 1-.037.225l-1.684 10.104A2 2 0 0 1 10.305 15H5.694a2 2 0 0 1-1.973-1.671L2.037 3.225zm9.89-.69C10.966 2.214 9.578 2 8 2c-1.58 0-2.968.215-3.926.534-.477.16-.795.327-.975.466.18.14.498.307.975.466C5.032 3.786 6.42 4 8 4s2.967-.215 3.926-.534c.477-.16.795-.327.975-.466-.18-.14-.498-.307-.975-.466z"/>
                     </svg> 

@@ -55,7 +55,7 @@ export const DashboardPage = () => {
                         <li>
                             <Link to= 'client'>
                                 <button>
-                                    <span className='text'>Clientes</span>
+                                    <span className='text'>CLIENTS</span>
                                 </button>
                             </Link>
                         </li>

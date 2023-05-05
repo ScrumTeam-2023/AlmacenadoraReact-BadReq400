@@ -18,7 +18,7 @@ export const AccountCard = ({title, name, surname, age,email ,phone }) => {
 
   const getAccount = async()=>{
     try {
-      const { data } = await axios.get(`http://localhost:3200/account/getaccounts`)
+      const { data } = await axios.get(`http://localhost:3200/account/get-accounts`)
       if(data.account)
       {
         setAccount(data.account)
@@ -82,6 +82,8 @@ export const AccountCard = ({title, name, surname, age,email ,phone }) => {
     if(confirmDelete){
         const { data } = await axios.delete(`http://localhost:3200/account/delete-account/${id}`)
         alert(`Thy kind is Dead`)
+        window.location.reload()
+
       }
    } catch (err) {
     console.error(err)

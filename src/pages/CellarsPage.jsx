@@ -90,7 +90,7 @@ export const CellarsPage = () => {
         description: document.getElementById('inpuDes').value,
         location: document.getElementById('inputLocation').value,
         size: document.getElementById('inputSize').value,
-        //availability: document.getElementById('inputAvaial').value,
+        client: document.getElementById('inputClient').value,
         price: document.getElementById('inputPrice').value,
       }
         //esta parte va la llamada (REVISEN QUE ESTE BIEN ESCRITO)
@@ -246,7 +246,7 @@ useEffect(()=>{
          <div className=" row g-0 justify-content-center">
           {
             // aca se coloca los datos a mostrar
-            bodega.map(({name, description, location, size,availability,price}, i)=>{
+            bodega.map(({name, description, location, size,client,price}, i)=>{
               return (
                 <CellarCard
                 // ahora algo un tanto pesado
@@ -256,8 +256,8 @@ useEffect(()=>{
                   description={description}
                   location={location}
                   size={size}
-                  //availability={availability}
-                  price={price}
+                  client={client}
+                  price={price} 
                 >
                   
                 </CellarCard>
