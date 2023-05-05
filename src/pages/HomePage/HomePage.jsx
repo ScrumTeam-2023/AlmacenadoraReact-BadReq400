@@ -34,8 +34,9 @@ export const HomePage = () => {
                         <div className="masthead-content-text">
                           <p>
                             <span className="text-white">
-                              Almacen es una plataforma de compra y venta de
-                              productos.
+                              Ofrecemos nuestros servicios para Renta y alquiler de almacenes para todo publico.
+                              Con una gran variedad de Almacenes para que pudeas guardar tus pertenencias mas Preciadas
+                              
                             </span>
                             <br />
                           </p>
@@ -94,9 +95,9 @@ export const HomePage = () => {
             <div class="card">
               <img src="https://i.pinimg.com/originals/5f/1c/36/5f1c36cdb434ec3cea948e6c2516f9fe.png" width="100" height="100"/>
               <div class="card-body">
-                <h5 class="card-title">Ana Sofia</h5>
+                <h5 class="card-title">Elton Tito</h5>
                 <p class="card-text">
-                  Es una exelente empresa, ya que nos perimite poder almacenar nuestras cosas.
+                  Que pesimo Servicio :c
                 </p>
                 <a href="#" class="btn btn-primary">
                  Home
@@ -126,7 +127,7 @@ export const HomePage = () => {
               <div class="card-body">
                 <h5 class="card-title">Monse Tejon</h5>
                 <p class="card-text">
-                  Es una exelente almacenadora ya que guardo productos sin pagar el IVA
+                  El servicio es Genial pero aveces no tengo contacto con ellos pero almenos mis cosas estan seguras 
                 </p>
                 <a href="#" class="btn btn-primary">
                   Home
@@ -180,11 +181,11 @@ export const HomePage = () => {
             <div class="card">
               <img src="https://i.pinimg.com/originals/5f/1c/36/5f1c36cdb434ec3cea948e6c2516f9fe.png" width="100" height="100"/>
               <div class="card-body">
-                <h5 class="card-title">Ana Sofia</h5>
+                <h5 class="card-title">Elton Tito</h5>
                 <p class="card-text">
-                  Exelente
+                  Terrible
                   <br />
-                  ⭐⭐⭐⭐⭐
+                  ⭐
                 </p>
                 <a href="#" class="btn btn-primary">
                  Home
@@ -216,9 +217,9 @@ export const HomePage = () => {
               <div class="card-body">
                 <h5 class="card-title">Monse Tejon</h5>
                 <p class="card-text">
-                Exelente
+                Bueno
                   <br />
-                  ⭐⭐⭐⭐⭐
+                  ⭐⭐⭐⭐
                 </p>
                 <a href="#" class="btn btn-primary">
                   Home

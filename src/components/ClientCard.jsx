@@ -92,7 +92,7 @@ export const ClientCard = ({title, surname, phone}) => {
 
 
 useEffect(()=>{
-
+  getClient();
   //aca deberia ir tambien el GET del secundario/Referencial
 },[]);
 

@@ -206,7 +206,7 @@ useEffect(()=>{
          <div className=" row g-0 justify-content-center">
           {
             // aca se coloca los datos a mostrar
-            account.map(({ name, description, phone}, i)=>{
+            client.map(({name, surname, phone}, i)=>{
               return (
                 <ClientCard
                 // ahora algo un tanto pesado
